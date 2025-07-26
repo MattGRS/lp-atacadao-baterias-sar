@@ -61,27 +61,6 @@ function toggleHeader() {
     }
 }
 
-function responsive() {
-    if (window.innerWidth > RESPONSIVE_WIDTH) {
-        collapseHeaderItems.style.width = ""
-    }else{
-        isHeaderCollapsed = true
-        collapseBtn.classList.add("bi-list", headerWhiteBg ? "primary-text-color" : null)
-
-    }
-}
-
-// function
-
-window.addEventListener("resize", responsive)
-
-const bookingDate = document.querySelector("#date")
-const today = new Date().toISOString().split('T')[0]
-bookingDate.setAttribute('min', today)
-
-
-const timings = document.querySelector("#timings")
-
 for (let x=7; x < 20; x+=0.30){
     const nextTime = `${x.toFixed(2)}`.replace(".", ":")
 
